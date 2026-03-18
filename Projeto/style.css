@@ -1,0 +1,93 @@
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e0e7ff; /* Light blue background for a softer look */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #00008B; /* Dark blue for primary color */
+}
+
+#formulario-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #00008B; /* Dark blue primary color */
+    color: white; /* White text for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#formulario-cadastro textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#formulario-cadastro input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+}
+
+#formulario-cadastro button {
+    background-color: #4169E1; /* Royal blue for button */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#formulario-cadastro button:hover {
+    background-color: #00008B; /* Darker on hover */
+}
+
+.cardapio-ul {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #B0C4DE; /* Light steel blue for cardapio */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.prato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.2s; /* Add transition for hover effect */
+}
+
+.prato:hover {
+    transform: scale(1.05); /* Slight zoom on hover for prettier effect */
+}

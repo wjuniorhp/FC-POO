@@ -9,12 +9,14 @@
 <body>
     <h1>Cardápio</h1>
 
-    <div id="formulario-cadastro">
+    <form id="formulario-cadastro">
+        <h2>Cadastrar Prato</h2>
         <input type="text" id="nome" placeholder="Nome do prato">
         <input type="number" id="preco" placeholder="Preco do prato">
-        <input type="text" id="imagem" placeholder="Imagem do prato">
+        <input type="text" id="imagem" placeholder="URL da imagem do prato">
+        <textarea id="descricao" placeholder="Descrição do prato"></textarea>
         <button id="botao-cadastrar">Cadastrar</button>
-    </div>
+    </form>
 
     <div id="cardapio"></div>
     <script src="script.js"></script>
