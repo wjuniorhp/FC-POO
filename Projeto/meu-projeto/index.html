@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>meu-projeto</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <h1>Gestão de Cardápio</h1>
+
+    <div class="container-topo">
+      <form id="formulario-cadastro" class="formulario">
+        <div class="titulos-form">
+          <h2>Cadastrar Prato</h2>
+          <p>
+            Preencha os campos abaixo para adicionar um novo prato ao cardápio.
+          </p>
+        </div>
+        <input type="text" id="nome" placeholder="Nome do prato" />
+        
+        <select id="categoria">
+          <option value="default" disabled selected>
+            Selecione uma categoria
+          </option>
+          <option value="Lanches">Lanches</option>
+          <option value="Bebidas">Bebidas</option>
+        </select>
+        
+        <input type="text" id="preco" placeholder="R$ 0,00" />
+        <input type="text" id="imagem" placeholder="URL da imagem" />
+        <textarea id="descricao" placeholder="Descrição do prato"></textarea>
+        <div class="div-botao">
+          <button id="botao-cadastrar" class="botao">Cadastrar</button>
+        </div>
+      </form>
+
+      <div id="historico-transacoes">
+        <h2>Histórico de transações</h2>
+        <h4>Total de vendas: <span id="total-vendas">R$ 0,00</span></h4>
+        <table id="tabela-historico">
+          <thead>
+            <tr>
+              <th>Prato</th>
+              <th>Valor</th>
+              <th>Data/Hora</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-historico-tbody"></tbody>
+
+        </table>
+      </div>
+    </div>
+
+    <div id="cardapio"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

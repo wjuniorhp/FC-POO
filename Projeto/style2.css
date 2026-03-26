@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f3ee;
+  color: #2b2b2b;
+  padding: 18px;
+}
+
+h1,
+.formulario,
+#cardapio {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   Título
+========================= */
+h1 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #2a201a;
+}
+
+/* Barrinha decorativa no título */
+h1::after {
+  content: "";
+  display: block;
+  height: 4px;
+  border-radius: 6px;
+  margin-top: 10px;
+  background: #b22222;
+}
+
+/* =========================
+  Formulário
+========================= */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #eadfd4;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  margin-bottom: 22px;
+}
+
+/* Título do form */
+
+.titulos-form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  gap: 12px;
+  background: #ffffff;
+}
+
+.formulario h2 {
+  text-align: center;
+  font-size: 20px;
+  color: #3a2d25;
+}
+.formulario p {
+  text-align: center;
+  font-size: 16px;
+  color: #3a2d25;
+}
+
+/* Inputs/textarea */
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  border: 1px solid #dfd3c7;
+  background: #faf7f3;
+  padding: 12px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Placeholder */
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+  color: #8b7d74;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Foco */
+.formulario input:focus,
+.formulario textarea:focus {
+  border: 1px solid #b22222;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(178, 34, 34, 0.15);
+  transform: translateY(-1px);
+}
+
+.formulario textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.div-botao {
+  width: 100%;
+  text-align: center;
+}
+
+.botao,
+.botao-remover {
+  width: 50%;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background: #b22222;
+  cursor: pointer;
+  box-shadow: 0 10px 18px rgba(178, 34, 34, 0.22);
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.botao:hover,
+.botao-remover:hover {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 22px rgba(178, 34, 34, 0.28);
+}
+
+/* =========================
+   Área do cardápio
+========================= */
+
+#cardapio {
+  margin-top: 30px;
+}
+
+/* UL vira um grid de cards */
+.cardapio-ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  padding: 0;
+}
+
+/* Card do prato */
+.prato {
+
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #eadfd4;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.prato:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagem do prato */
+
+.prato img{
+  width: 100%;          /* recomendo 100% dentro do card */
+  aspect-ratio: 16 / 9; /* todas ficam com a mesma proporção */
+  object-fit: cover;    /* recorta sem distorcer */
+  border-radius: 10px;
+  margin-bottom: 14px;
+  display: block;       /* tira espaço “fantasma” abaixo da imagem */
+}
+
+
+/* Conteúdo interno do card */
+.prato h2 {
+  font-size: 20px;
+  margin: 14px 14px 6px;
+  color: #2a201a;
+}
+
+.prato h3 {
+  font-size: 16px;
+  margin: 0 14px 8px;
+  color: #2f7d32;
+  font-weight: bold;
+}
+
+/* Descrição */
+.prato p {
+  margin: 0 14px 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #6e5f57;
+  /* text-align: justify; */
+ 
+}
+
+/* =========================
+   Responsividade
+========================= */
+
+/* Tablet */
+@media (min-width: 600px) {
+  .cardapio-ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .cardapio-ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

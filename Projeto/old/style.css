@@ -3,15 +3,13 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #e0e7ff;
-    /* Light blue background for a softer look */
+    background-color: #e0e7ff; /* Light blue background for a softer look */
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
-    color: #00008B;
-    /* Dark blue for primary color */
+    color: #00008B; /* Dark blue for primary color */
 }
 
 #formulario-cadastro {
@@ -21,10 +19,8 @@ h1 {
     margin-top: 20px;
     border: 1px solid #ccc;
     padding: 20px;
-    background-color: #00008B;
-    /* Dark blue primary color */
-    color: white;
-    /* White text for contrast */
+    background-color: #00008B; /* Dark blue primary color */
+    color: white; /* White text for contrast */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     max-width: 400px;
@@ -37,8 +33,7 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 3px;
     width: 100%;
-    resize: vertical;
-    /* Allow vertical resizing */
+    resize: vertical; /* Allow vertical resizing */
 }
 
 #formulario-cadastro input {
@@ -50,8 +45,7 @@ h1 {
 }
 
 #formulario-cadastro button {
-    background-color: #4169E1;
-    /* Royal blue for button */
+    background-color: #4169E1; /* Royal blue for button */
     color: white;
     border: none;
     padding: 10px;
@@ -61,16 +55,14 @@ h1 {
 }
 
 #formulario-cadastro button:hover {
-    background-color: #00008B;
-    /* Darker on hover */
+    background-color: #00008B; /* Darker on hover */
 }
 
 .cardapio-ul {
     margin-top: 20px;
     border: 1px solid #ccc;
     padding: 20px;
-    background-color: #B0C4DE;
-    /* Light steel blue for cardapio */
+    background-color: #B0C4DE; /* Light steel blue for cardapio */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     margin: 0 auto;
@@ -93,11 +85,16 @@ h1 {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    transition: transform 0.2s;
-    /* Add transition for hover effect */
+    transition: transform 0.2s; /* Add transition for hover effect */
+    max-width: 300px;
+}
+
+.prato img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .prato:hover {
-    transform: scale(1.05);
-    /* Slight zoom on hover for prettier effect */
+    transform: scale(1.05); /* Slight zoom on hover for prettier effect */
 }
